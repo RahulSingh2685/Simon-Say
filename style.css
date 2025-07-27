@@ -1,0 +1,130 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    position: relative;
+}
+
+header {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.high-score {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    background: #333;
+    color: white;
+    border-radius: 5px;
+}
+
+#start-btn {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#start-btn:hover {
+    background-color: #218838;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.line-one, .line-two {
+    display: flex;
+}
+
+.btn {
+    height: 150px;
+    width: 150px;
+    border-radius: 20%;
+    border: 5px solid black;
+    margin: 1rem;
+    transition: transform 0.1s ease-in-out, filter 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.yellow { background-color: #f99b45; }
+.red { background-color: #d95980; }
+.green { background-color: #819ff9; }
+.purple { background-color: #63aac0; }
+
+.flash {
+    background-color: white !important;
+}
+
+.userflash {
+    background-color: lightgreen !important;
+}
+
+.game-over {
+    background-color: red;
+}
+
+.progress-container {
+    width: 200px;
+    height: 10px;
+    background: #ddd;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #28a745;
+    width: 0%;
+    transition: width 0.3s ease;
+    border-radius: 5px;
+}
+
+.pulse {
+    animation: pulse 1.5s infinite;
+}
+
+.victory {
+    animation: victory 1s ease;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes victory {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2) rotate(360deg); }
+    100% { transform: scale(1); }
+}
