@@ -9,13 +9,7 @@ let startBtn = document.querySelector("#start-btn");
 const highScoreElement = document.querySelector("#high-score");
 highScoreElement.textContent = highScore;
 
-const sounds = {
-    yellow: new Audio("sounds/yellow.mp3"),
-    red: new Audio("sounds/red.mp3"),
-    purple: new Audio("sounds/purple.mp3"),
-    green: new Audio("sounds/green.mp3"),
-    wrong: new Audio("sounds/wrong.mp3")
-};
+
 
 startBtn.addEventListener("click", function () {
     if (!started) {
@@ -36,13 +30,13 @@ document.addEventListener("keydown", function (event) {
 function gameFlash(btn) {
     btn.classList.add("flash");
     setTimeout(() => btn.classList.remove("flash"), 300);
-    sounds[btn.id].play();
+    
 }
 
 function userFlash(btn) {
     btn.classList.add("userflash");
     setTimeout(() => btn.classList.remove("userflash"), 300);
-    sounds[btn.id].play();
+    
 }
 
 function levelUp() {
